@@ -12,11 +12,11 @@ In order for this to work, you just need to input your DB info into _env.php and
 
 ## Screenshots
 
-+ [Default](../blob/master/screenshots/1.%20default.png)
-+ [Search by Name](../blob/master/screenshots/2.%20search-by-name.png)
-+ [Sort by Boss Name](../blob/master/screenshots/3.%20sort-by-boss-name.png)
-+ [Paging Example](../blob/master/screenshots/4.%20paging-and-records-per-page.png)
-+ [Another Sorting Example](../blob/master/screenshots/5.%20sort-by-number-of-subordinates.png)
++ [Default](../master/screenshots/1.%20default.png)
++ [Search by Name](../master/screenshots/2.%20search-by-name.png)
++ [Sort by Boss Name](../master/screenshots/3.%20sort-by-boss-name.png)
++ [Paging Example](../master/screenshots/4.%20paging-and-records-per-page.png)
++ [Another Sorting Example](../master/screenshots/5.%20sort-by-number-of-subordinates.png)
 
 ## Notes
 
