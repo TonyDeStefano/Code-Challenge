@@ -93,12 +93,12 @@ $controller
 				<?php if ( $controller->getPage() == 1 ) { ?>
 					<i class="fa fa-chevron-left text-muted"></i>
 				<?php } else { ?>
-					<a href="?page=<?php echo $controller->getPrevPageNumber(); ?>&name=<?php echo $search; ?>"><i class="fa fa-chevron-left"></i></a>
+					<a href="?page=<?php echo $controller->getPrevPageNumber(); ?>&name=<?php echo $search; ?>&records=<?php echo $records; ?>"><i class="fa fa-chevron-left"></i></a>
 				<?php } ?>
 				<?php if ( $controller->getPage() == $controller->getPages() ) { ?>
 					<i class="fa fa-chevron-right text-muted"></i>
 				<?php } else { ?>
-					<a href="?page=<?php echo $controller->getNextPageNumber(); ?>&name=<?php echo $search; ?>"><i class="fa fa-chevron-right"></i></a>
+					<a href="?page=<?php echo $controller->getNextPageNumber(); ?>&name=<?php echo $search; ?>&records=<?php echo $records; ?>"><i class="fa fa-chevron-right"></i></a>
 				<?php } ?>
 				Page
 				<?php echo $controller->getPage(); ?>
