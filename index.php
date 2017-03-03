@@ -50,7 +50,8 @@ $controller
 		<h1>
             Employees!<br>
             <small>
-                <?php echo number_format( $controller->getRecordCount() ); ?> Employee<?php if ( $controller->getRecordCount() != 1 ) { ?>s<?php } ?> Found
+                <?php echo number_format( $controller->getRecordCount() ); ?>
+                Employee<?php if ( $controller->getRecordCount() != 1 ) { ?>s<?php } ?> Found
             </small>
         </h1>
 	</div>
@@ -61,7 +62,7 @@ $controller
 
 			<form class="well">
 				<div class="form-group">
-					<label for="name">Name</label>
+					<label for="name">Employee Name</label>
 					<input class="form-control" id="name" name="name" value="<?php echo htmlspecialchars( $controller->getSearchTerm() ); ?>">
 				</div>
 				<div class="form-group">

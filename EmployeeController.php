@@ -23,6 +23,8 @@ class EmployeeController {
 	}
 
 	/**
+	 * Returns employees based on search critera
+	 *
 	 * @return Employee[]
 	 */
 	private function getFilteredEmployees()
@@ -163,6 +165,9 @@ class EmployeeController {
 	}
 
 	/**
+	 * Loads all employees and creates a filtered array of employee ids to handle the search criteria.
+	 * Also builds a tree of subordinates for use when loadSubordinateCount() is called the first time
+	 *
 	 * @return $this
 	 */
 	public function loadAllEmployees()

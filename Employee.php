@@ -16,9 +16,35 @@ class Employee {
 			->read();
 	}
 
+	/**
+	 *
+	 */
 	public function read()
 	{
+		/** @var \PDO $db */
+		global $db;
 
+		if ( $this->id !== NULL )
+		{
+			$sql = "
+				SELECT
+					*
+				FROM
+					employees
+				WHERE
+					id = ?";
+			$stmt = $db->prepare( $sql );
+			$stmt->execute( [ $this->id ] );
+
+			if ( $row = $stmt->fetchObject() )
+			{
+				$this->loadFromObject( $row );
+			}
+			else
+			{
+				$this->id = NULL;
+			}
+		}
 	}
 
 	/**
@@ -98,5 +124,30 @@ class Employee {
 	public function hasBoss()
 	{
 		return ( $this->boss_id !== NULL && $this->id != $this->boss_id );
+	}
+
+	/**
+	 * @return Employee
+	 */
+	public function getBoss()
+	{
+		if ( $this->boss === NULL && $this->hasBoss() )
+		{
+			$this->boss = new Employee( $this->boss_id );
+		}
+
+		return $this->boss;
+	}
+
+	/**
+	 * @param Employee $boss
+	 *
+	 * @return Employee
+	 */
+	public function setBoss( $boss )
+	{
+		$this->boss = $boss;
+
+		return $this;
 	}
 }
