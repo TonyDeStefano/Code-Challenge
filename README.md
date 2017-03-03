@@ -5,7 +5,7 @@ In order for this to work, you just need to input your DB info into _env.php and
 ## Files Included
 
 + **index.php** - this is the main html file
-+ **env.php** - this stores DB connect variabls
++ **env.php** - this stores DB connect variables
 + **Employee.php** - this is the Model for the employee object
 + **EmployeeController.php** - this is the Controller for the project
 + **js/table-sortable.js** - this is a lightweight table sorting script that I wrote a few months back
