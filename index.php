@@ -1,6 +1,6 @@
 <?php
 
-/* I'd normally use composer to included my dependencies, but since this is tiny and only has one page ... */
+/* I'd normally use composer to include my dependencies, but since this is tiny and only has one page ... */
 
 require_once( 'env.php' );
 require_once( 'EmployeeController.php' );
